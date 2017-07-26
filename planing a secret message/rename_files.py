@@ -9,6 +9,8 @@ def rename_files():
     os.chdir(r"/media/milton/Data/embedded systems/python/python/planing a secret message/prank")
     # (2) for each file, rename filename
     for file_name in file_list:
+        print("Old name - "+file_name)
+        print("New name - "+file_name.translate(None, "0123456789"))
         os.rename(file_name, file_name.translate(None, "0123456789"))
     os.chdir(saved_path)
 rename_files()
